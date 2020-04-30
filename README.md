@@ -1,5 +1,12 @@
 # FamilyTrivia
 
+## To Do List
+
+- [ ] A quizmaster user can submit questions with answers.
+- [ ] A contestant user can submit their own answers to these questions.
+
+# Angular Info
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
 ## Development server

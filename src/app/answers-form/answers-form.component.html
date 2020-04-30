@@ -1,0 +1,23 @@
+<form [formGroup]="answersForm" (ngSubmit)="onSubmit()">
+  <div
+    formArrayName="answers"
+    *ngFor="let control of answers.controls; index as i"
+  >
+    <div class="field">
+      <label class="label">
+        {{ questions[i] }}
+      </label>
+      <div class="control">
+        <input class="input" type="text" [formControl]="control" />
+      </div>
+      <br />
+    </div>
+  </div>
+  <button class="button is-primary" type="submit">Submit Answers</button>
+</form>
+
+<br />
+
+<pre>
+  {{ answersForm.value | json }}
+</pre>
