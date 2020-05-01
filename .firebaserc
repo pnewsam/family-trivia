@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "family-trivia-c2f63"
+  },
+  "targets": {
+    "family-trivia-c2f63": {
+      "hosting": {
+        "family-trivia": [
+          "family-trivia-c2f63"
+        ]
+      }
+    }
   }
 }

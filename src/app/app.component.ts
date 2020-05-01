@@ -6,6 +6,12 @@ const QUESTIONS = [
   'What is your name?',
 ];
 
+const ANSWERS = [
+  'What do you mean? African or European?',
+  'Blue.',
+  'Arthur, King of the Britons.',
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,5 +19,5 @@ const QUESTIONS = [
 })
 export class AppComponent {
   title = 'family-trivia';
-  questions = QUESTIONS;
+  gameId = 'BWlLLxSFKkSLgvxw48vA';
 }

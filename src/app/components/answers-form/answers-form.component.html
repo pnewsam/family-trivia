@@ -1,4 +1,17 @@
 <form [formGroup]="answersForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label is-large">
+      Player Name
+    </label>
+    <div class="control">
+      <input
+        class="input is-large is-primary"
+        type="text"
+        [formControl]="answersForm.controls.playerName"
+      />
+    </div>
+  </div>
+
   <div
     formArrayName="answers"
     *ngFor="let control of answers.controls; index as i"
