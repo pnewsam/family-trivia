@@ -9,6 +9,7 @@
     ]
   },
   "hosting": {
+    "target": "family-trivia",
     "public": "dist/family-trivia",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
