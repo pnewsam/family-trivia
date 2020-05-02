@@ -8,9 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnswersFormComponent } from './components/answers-form/answers-form.component';
 import { environment } from '../environments/environment';
+import { QuestionsFormComponent } from './components/questions-form/questions-form.component';
+import { ResultsComponent } from './components/results/results.component';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
-  declarations: [AppComponent, AnswersFormComponent],
+  declarations: [
+    AppComponent,
+    AnswersFormComponent,
+    QuestionsFormComponent,
+    ResultsComponent,
+    GameComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,4 +30,4 @@ import { environment } from '../environments/environment';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

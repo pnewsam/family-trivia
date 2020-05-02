@@ -1,0 +1,28 @@
+<h2 class="title is-2">Results</h2>
+
+<div class="results__panels">
+  <div
+    *ngFor="let responses of responsesByPlayer | keyvalue"
+    class="panel results__panel"
+  >
+    <p class="panel-heading results__panel-heading">
+      {{ responses.key }}
+    </p>
+    <ul>
+      <li
+        *ngFor="let response of responses.value | keyvalue"
+        class="panel-block results__panel-block"
+      >
+        <p>
+          <span class="has-text-weight-bold">
+            {{ response.key }}.&nbsp;&nbsp;</span
+          >
+          <span>
+            {{ response.value }}
+          </span>
+        </p>
+        <span class="tag is-success">Correct</span>
+      </li>
+    </ul>
+  </div>
+</div>

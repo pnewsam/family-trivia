@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, FormArray } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { firestore } from 'firebase';
 
 @Component({
   selector: 'answers-form',
@@ -15,8 +13,6 @@ export class AnswersFormComponent implements OnInit {
     playerName: new FormControl(''),
     answers: new FormArray([]),
   });
-
-  game: Observable<any>;
   questions: any[];
   firestore: AngularFirestore;
 
@@ -25,8 +21,7 @@ export class AnswersFormComponent implements OnInit {
     this.firestore
       .doc('games/BWlLLxSFKkSLgvxw48vA')
       .get()
-      .toPromise()
-      .then((doc) => {
+      .subscribe((doc) => {
         this.questions = doc.data().questions;
         Object.values(this.questions).forEach((_) => {
           this.answers.push(new FormControl(''));

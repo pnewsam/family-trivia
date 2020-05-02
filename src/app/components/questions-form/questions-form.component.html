@@ -1,0 +1,28 @@
+<h2 class="title is-2">
+  Questions Form
+</h2>
+
+<form [formGroup]="questionsForm" (ngSubmit)="onSubmit()">
+  <div *ngFor="let control of questions.controls" class="field">
+    <label class="label">
+      <div class="control">
+        <input type="text" class="input" [formControl]="control" />
+      </div>
+    </label>
+  </div>
+  <br />
+  <button class="button is-primary" type="button" (click)="addQuestion()">
+    Add Question
+  </button>
+  <br />
+  <br />
+  <button class="button is-success" type="submit">
+    Submit Questions
+  </button>
+</form>
+
+<br />
+
+<pre>
+  {{ questionsForm.value | json }}
+</pre>
